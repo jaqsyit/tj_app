@@ -8,13 +8,13 @@ class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 45),
+      padding: const EdgeInsets.symmetric(vertical: 45, horizontal: 20),
       color: AppStyles().color1,
       height: 200,
       width: MediaQuery.sizeOf(context).width,
       child: Center(
         child: SizedBox(
-          width: 960,
+          width: 1440,
           child: Column(
             children: [
               Row(

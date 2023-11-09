@@ -8,7 +8,7 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 960,
+      width: 1440,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
