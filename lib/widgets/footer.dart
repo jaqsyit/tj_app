@@ -9,12 +9,12 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 45, horizontal: 20),
-      color: AppStyles().color1,
+      color: AppColors.primaryDark,
       height: 200,
       width: MediaQuery.sizeOf(context).width,
       child: Center(
         child: SizedBox(
-          width: 1440,
+          width: 1200,
           child: Column(
             children: [
               Row(
@@ -25,15 +25,21 @@ class Footer extends StatelessWidget {
                     width: 50,
                     height: 50,
                   ),
-                  const Spacer(),
                   SocialButtons(),
-                  const Spacer(),
+                  const SizedBox(width: 120),
                 ],
               ),
               const Spacer(),
-              const Text(
-                'Copyright © 2023 Түпқараған жастары',
-                style: CustomTextStyles.s12w400cw,
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(width: 50),
+                  Text(
+                    'Copyright © 2023 Түпқараған жастары',
+                    style: AppTextStyles.s12w400cw,
+                  ),
+                  SizedBox(width: 120),
+                ],
               ),
             ],
           ),

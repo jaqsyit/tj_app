@@ -9,20 +9,29 @@ class SwitchLocale extends StatelessWidget {
     return Row(
       children: [
         Container(
-          padding: EdgeInsets.all(5),
+          width: 60,
+          height: 40,
+          padding: const EdgeInsets.all(5),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10), color: Colors.white),
-          child: Text(
-            'Каз',
-            style: TextStyle(color: AppStyles().color1),
+            borderRadius: BorderRadius.circular(15),
+            color: Colors.white,
+          ),
+          child: const Center(
+            child: Text(
+              'Қаз',
+              style: TextStyle(color: AppColors.primary),
+            ),
           ),
         ),
         Container(
-            padding: EdgeInsets.all(5),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: AppStyles().color1),
-            child: Text('Рус')),
+          padding: const EdgeInsets.all(5),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              color: AppColors.primary),
+          child: const Center(
+            child: Text('Рус'),
+          ),
+        ),
       ],
     );
   }

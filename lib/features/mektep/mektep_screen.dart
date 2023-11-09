@@ -16,7 +16,7 @@
 //         centerTitle: true,
 //         title: Text(
 //           S.of(context).school,
-//           style: CustomTextStyles.s20w500cb,
+//           style: AppTextStyles.s20w500cb,
 //         ),
 //         backgroundColor: Colors.white,
 //         iconTheme: const IconThemeData(color: Colors.black),
@@ -143,7 +143,7 @@
 //               children: [
 //                 Text(
 //                   S.of(context).kosymsha,
-//                   style: CustomTextStyles.s20w500cw,
+//                   style: AppTextStyles.s20w500cw,
 //                 ),
 //               ],
 //             ),

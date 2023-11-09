@@ -1,23 +1,58 @@
 import 'package:flutter/material.dart';
 
-class AppStyles {
-  Color color1 = const Color(0xFF1C39A1);
-  Color color2 = const Color(0xFF8BE1DE);
+class AppColors {
+  static const Color primary = Color(0xFF1C39A1);
+  static const Color secondary = Color(0xFF8BE1DE);
+  static const Color primaryDark = Color(0xFF122361);
 }
 
-class CustomTextStyles {
+class AppTextStyles {
   static const TextStyle s16w400cb = TextStyle(
-    color: Colors.black,
     fontFamily: 'Oswald',
+    color: Colors.black,
     fontSize: 16.0,
-    fontStyle: FontStyle.normal,
     fontWeight: FontWeight.w400,
   );
 
   static const TextStyle s12w400cw = TextStyle(
+    fontFamily: 'Inter',
     color: Colors.white,
     fontSize: 12.0,
-    fontFamily: 'Inter',
     fontWeight: FontWeight.w400,
+  );
+
+  static const TextStyle s18w500cPrimary = TextStyle(
+    fontFamily: 'Inter',
+    color: AppColors.primary,
+    fontSize: 18.0,
+    fontWeight: FontWeight.w500,
+  );
+
+  static const TextStyle s18w400cb = TextStyle(
+    fontFamily: 'Inter',
+    color: Colors.black,
+    fontSize: 18.0,
+    fontWeight: FontWeight.w400,
+  );
+
+  static const TextStyle s18w500cw = TextStyle(
+    fontFamily: 'Inter',
+    color: Colors.white,
+    fontSize: 18.0,
+    fontWeight: FontWeight.w500,
+  );
+
+  static const TextStyle s20w600cb = TextStyle(
+    fontFamily: 'Inter',
+    color: Colors.black,
+    fontSize: 20.0,
+    fontWeight: FontWeight.w600,
+  );
+
+  static const TextStyle s32w600cb = TextStyle(
+    fontFamily: 'Inter',
+    color: Colors.black,
+    fontSize: 32.0,
+    fontWeight: FontWeight.w600,
   );
 }

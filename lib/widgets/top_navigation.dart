@@ -16,48 +16,82 @@ class TopNav extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        if (constraints.maxWidth >= 1440) {
-          // Экран больше или равен 1440 пикселям, используем Row
+        if (constraints.maxWidth >= 1200) {
           return SizedBox(
-            width: 1440,
+            width: 1200,
             child: Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: tabLabels.map((label) {
-                return TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    label,
-                    style: CustomTextStyles.s16w400cb,
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  ...tabLabels.map((label) {
+                    return TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        label,
+                        style: AppTextStyles.s16w400cb,
+                      ),
+                    );
+                  }).toList(),
+                  const Divider(),
+                  Container(
+                    width: 160,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromRGBO(175, 157, 98, 1),
+                          Color.fromRGBO(145, 131, 85, 1),
+                        ],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.transparent,
+                        shadowColor: Colors.transparent,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: const Text('Өтінім беру',
+                          style: TextStyle(color: Colors.white)),
+                    ),
                   ),
-                );
-              }).toList(),
-            ),
+                  SizedBox(
+                    height: 40,
+                    width: 110,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.primary,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: const Text('Кіру'),
+                    ),
+                  )
+                ]),
           );
         } else {
-          return IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () {
-              showModalBottomSheet(
-                context: context,
-                builder: (BuildContext context) {
-                  return ListView(
-                    children: tabLabels.map((label) {
-                      return ListTile(
-                        title: Text(
-                          label,
-                          style: CustomTextStyles.s16w400cb,
-                        ),
-                        onTap: () {
-                          Navigator.pop(context); // Закрыть меню после нажатия
-                        },
-                      );
-                    }).toList(),
-                  );
-                },
-              );
+          return PopupMenuButton<String>(
+            onSelected: (String label) {},
+            itemBuilder: (BuildContext context) {
+              return tabLabels.map((String label) {
+                return PopupMenuItem<String>(
+                  value: label,
+                  child: Text(
+                    label,
+                    style: AppTextStyles.s16w400cb,
+                  ),
+                );
+              }).toList();
             },
+            icon: const Icon(Icons.menu),
           );
         }
       },

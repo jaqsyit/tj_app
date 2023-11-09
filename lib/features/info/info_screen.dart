@@ -25,7 +25,7 @@
 //           centerTitle: true,
 //           title: Text(
 //             S.of(context).info,
-//             style: CustomTextStyles.s20w500cb,
+//             style: AppTextStyles.s20w500cb,
 //           ),
 //           backgroundColor: Colors.white,
 //           iconTheme: const IconThemeData(color: Colors.black),
@@ -87,7 +87,7 @@
 //                 if (infoData.directorFio != '')
 //                   buildInfoRow('${S.of(context).director}:', infoData.directorFio),
 //                 const SizedBox(height: 20),
-//                 Text(S.of(context).contacts, style: CustomTextStyles.s14w400cb),
+//                 Text(S.of(context).contacts, style: AppTextStyles.s14w400cb),
 //                 const SizedBox(height: 20),
 //                 if (infoData.web != '')
 //                   InkWell(
