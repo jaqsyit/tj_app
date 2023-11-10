@@ -38,7 +38,7 @@ class Footer extends StatelessWidget {
                     'Copyright © 2023 Түпқараған жастары',
                     style: AppTextStyles.s12w400cw,
                   ),
-                  SizedBox(width: 120),
+                  SizedBox(width: 120,),
                 ],
               ),
             ],

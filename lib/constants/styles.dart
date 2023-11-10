@@ -7,17 +7,25 @@ class AppColors {
 }
 
 class AppTextStyles {
-  static const TextStyle s16w400cb = TextStyle(
-    fontFamily: 'Oswald',
-    color: Colors.black,
-    fontSize: 16.0,
-    fontWeight: FontWeight.w400,
-  );
-
+  
   static const TextStyle s12w400cw = TextStyle(
     fontFamily: 'Inter',
     color: Colors.white,
     fontSize: 12.0,
+    fontWeight: FontWeight.w400,
+  );
+
+  static const TextStyle s14w600cw = TextStyle(
+    fontFamily: 'Inter',
+    color: Colors.white,
+    fontSize: 14.0,
+    fontWeight: FontWeight.w600,
+  );
+
+  static const TextStyle s16w400cb = TextStyle(
+    fontFamily: 'Oswald',
+    color: Colors.black,
+    fontSize: 16.0,
     fontWeight: FontWeight.w400,
   );
 
@@ -46,6 +54,13 @@ class AppTextStyles {
     fontFamily: 'Inter',
     color: Colors.black,
     fontSize: 20.0,
+    fontWeight: FontWeight.w600,
+  );
+
+  static const TextStyle s28w600cb = TextStyle(
+    fontFamily: 'Inter',
+    color: Colors.black,
+    fontSize: 28.0,
     fontWeight: FontWeight.w600,
   );
 
