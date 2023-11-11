@@ -222,6 +222,114 @@ class Construct extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(
+              width: 1200,
+              child: Column(
+                children: [
+                  const Text(
+                    'Байланысу',
+                    style: AppTextStyles.s32w600cb,
+                  ),
+                  SizedBox(height: 70),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const SizedBox(
+                        width: 550,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              '«Түпқараған жастары» жастар қоғамдық бірлестігі қоғам игілігі үшін өз білімі мен күш-жігерін бөлісуге дайын дарынды, белсенді және қамқор қызметкерлерге әрқашан қызығушылық танытады.',
+                              style: AppTextStyles.s18w400cb,
+                            ),
+                            SizedBox(height: 70),
+                            Text(
+                              'Мекен жайы: Қазақстан Республикасы, Ақтау қаласы. 130000, 6 шағын аудан, 18 ғимарат',
+                              style: AppTextStyles.s18w400cb,
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(width: 100),
+                      SizedBox(
+                        width: 550,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Сұрақтар болған жағдайда форманы толтырыңыз.',
+                              style: AppTextStyles.s18w400cb,
+                            ),
+                            const SizedBox(height: 20),
+                            TextFormField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                hintText: 'Атыңыз',
+                                hintStyle: TextStyle(color: Colors.grey),
+                              ),
+                            ),
+                            const SizedBox(height: 20),
+                            TextFormField(
+                              keyboardType: TextInputType.emailAddress,
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                hintText: 'Email',
+                                hintStyle: TextStyle(color: Colors.grey),
+                              ),
+                            ),
+                            const SizedBox(height: 20),
+                            TextFormField(
+                              maxLines: 5,
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                hintText: 'Хабарлама',
+                                hintStyle: TextStyle(color: Colors.grey),
+                              ),
+                            ),
+                            const SizedBox(height: 20),
+                            Container(
+                              width: 190,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                gradient: const LinearGradient(
+                                  colors: [
+                                    Color.fromRGBO(175, 157, 98, 1),
+                                    Color.fromRGBO(145, 131, 85, 1),
+                                  ],
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                ),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.transparent,
+                                  shadowColor: Colors.transparent,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                ),
+                                onPressed: () {},
+                                child: const Text('Толығырақ',
+                                    style: TextStyle(color: Colors.white)),
+                              ),
+                            ),
+                            const SizedBox(height: 70),
+                          ],
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
             const Footer(),
           ],
         ),
@@ -323,8 +431,8 @@ class Construct extends StatelessWidget {
                   Color.fromRGBO(175, 157, 98, 1),
                   Color.fromRGBO(145, 131, 85, 1),
                 ],
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
               ),
               borderRadius: BorderRadius.circular(10),
             ),
