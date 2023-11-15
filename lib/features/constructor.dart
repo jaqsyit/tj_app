@@ -19,7 +19,7 @@ class Construct extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(height: 80, child: TopNav()),
+            SizedBox(height: 80, child: TopNav()),
             LayoutBuilder(
               builder: (context, constraints) {
                 return Container(

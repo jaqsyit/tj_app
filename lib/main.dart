@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tj_app/features/constructor.dart';
+import 'package:tj_app/features/login/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,8 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        home: Construct());
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      home: LoginScreen(),
+      // Construct(),
+    );
   }
 }
